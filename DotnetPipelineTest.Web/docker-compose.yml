@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+
+  web:
+    container_name: 'dotnetpipeline'
+    image: 'dotnetpipeline'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+     - "5000:5000"
+
+  web2:
+    container_name: 'dotnetpipeline2'
+    image: 'dotnetpipeline'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+     - "5001:5000"
+  web3:
+    container_name: 'dotnetpipeline3'
+    image: 'dotnetpipeline'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+     - "5002:5000"
